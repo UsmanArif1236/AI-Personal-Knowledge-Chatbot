@@ -6,7 +6,7 @@ from pathlib import Path
 
 def create_vector_store(text_chunks):
     """Converts text into embeddings and stores in FAISS."""
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     parent_dir = Path.cwd().parent  # Get parent directory
     VECTOR_DIR = parent_dir / "vectorstore/"
@@ -19,5 +19,5 @@ def load_vector_store():
     """Loads FAISS vector database."""
     parent_dir = Path.cwd().parent  # Get parent directory
     VECTOR_DIR = parent_dir / "vectorstore/"
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
     return FAISS.load_local(VECTOR_DIR, embeddings,allow_dangerous_deserialization=True)
