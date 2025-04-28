@@ -2,7 +2,7 @@
 
 AI-Powered RAG Chatbot that allows users to upload personal notes and intelligently query information using LLMs and vector search.
 
-##Project Description
+## Project Description
 Finding specific information inside long documents can be tedious and inefficient.
 This project solves that by building an AI chatbot that retrieves the most relevant parts of your uploaded notes and generates accurate answers using a powerful LLM.
 
