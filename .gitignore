@@ -1,2 +1,5 @@
 venv
 scripts/temp
+__pycache__
+vectorstore/*.faiss
+*.pkl
